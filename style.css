@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFC107;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px 10px;
+  text-align: center;
+}
+
+.logo {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+section {
+  background-color: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 25px;
+}
+
+section h2 {
+  color: #E65100;
+  text-align: left;
+  margin-top: 0;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #FFF8E1;
+  border: 2px solid #FFC107;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 250px;
+  max-width: 280px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card p:first-of-type {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #555;
+  flex-grow: 1; 
+}
+
+.card h3 {
+  color: #E65100;
+  margin-top: 0;
+}
+
+.card del {
+  color: #888888;
+  margin-right: 8px;
+}
+
+.card strong {
+  color: #E65100;
+  font-size: 20px;
+}
+
+/* --- Style Panduan Cara Pesan --- */
+.panduan-pesan {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.panduan-pesan li {
+  border: none;
+  background: none;
+  padding: 8px 0;
+  text-align: left;
+  flex: none;
+  font-weight: normal;
+  color: #333;
+}
+
+/* Replika tombol beli kecil di dalam teks panduan */
+.badge-beli {
+  background-color: #E65100;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.olfood-text {
+  margin-top: 25px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* --- Perbaikan List Ojek Online --- */
+ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background-color: #FFC107;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex: 1 1 150px;
+  min-width: 140px;
+  text-align: center;
+  transition: all 0.2s ease;
+  padding: 0; /* Diubah menjadi 0 agar tombol di dalamnya mengisi penuh ruang kotak */
+}
+
+li:hover {
+  background-color: #FFF8E1;
+  border-color: #FFC107;
+}
+
+/* Kelas baru untuk tombol link di dalam kotak list */
+.btn-ojol {
+  display: block;
+  padding: 12px 20px; /* Jarak sentuh dipindah ke sini */
+  color: #444;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+
+/* Warna teks otomatis menyesuaikan saat kotak luar di-hover */
+li:hover .btn-ojol {
+  color: #E65100; 
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #5d4300;
+  font-size: 14px;
+}
+
+/* --- Style Tombol Beli Paket --- */
+.btn-beli {
+  display: block;
+  background-color: #E65100;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-beli:hover {
+  background-color: #BF360C; /* Oranye yang sedikit lebih gelap saat di-hover */
+}
+
+.btn-beli:active {
+  transform: scale(0.98); /* Efek sedikit menekan saat diklik */
+}
+
+/* --- Style Section Kenapa Harus Snackita --- */
+.keunggulan-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.keunggulan-item {
+  flex: 1 1 280px; /* Membuat susunan grid yang responsif */
+  background-color: #FFF8E1; /* Latar krem lembut khas Snackita */
+  border: 1px solid #FFE082;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.keunggulan-item:hover {
+  transform: translateY(-3px); /* Efek melayang halus saat di-hover */
+}
+
+.keunggulan-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.keunggulan-header .icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.keunggulan-header h3 {
+  color: #E65100; /* Oranye tua tulisan menu */
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.keunggulan-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* --- Style Target Konsumen (Badges) --- */
+.target-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.target-section .badge {
+  background-color: #FFF8E1;
+  border: 1px solid #FFC107;
+  color: #5d4300;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* --- Style Visi Section --- */
+.visi-section p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* --- Style Call To Action (CTA) --- */
+.cta-section {
+  background-color: #FFF8E1; /* Latar krem penuh untuk area penutup */
+  border: 2px dashed #E65100; /* Garis putus-putus menarik */
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.cta-section h2 {
+  text-align: center;
+  color: #E65100;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.cta-buttons a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+/* Tombol Utama */
+.btn-primary {
+  background-color: #E65100;
+  color: white;
+  box-shadow: 0 4px 10px rgba(230, 81, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: #BF360C;
+}
+
+/* Tombol Kemitraan */
+.btn-secondary {
+  background-color: white;
+  color: #E65100;
+  border: 2px solid #E65100;
+}
+
+.btn-secondary:hover {
+  background-color: #FFF8E1;
+}
